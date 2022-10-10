@@ -1,18 +1,54 @@
 html,
 body {
-  padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  display: grid;
+  place-content: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+textarea{
+  font-family: inherit;
+  margin-bottom: 8px;
+  padding-left: 5px;
 }
 
-* {
-  box-sizing: border-box;
+h1{
+  text-align: center;
+}
+
+ul, h4 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  border-radius: 200px;
+  height: auto;
+  width: 50px;
+}
+
+ul li {
+  border-radius: 4px;
+  background: #eee;
+  border: 1px solid rgba(238, 238, 238, 0.765);
+  list-style: none;
+  margin-bottom: 16px;
+  max-width: 320px;
+  padding: 8px 32px;
+}
+
+form {
+  display: grid;
+  flex-direction: column;
+}
+
+form input{
+  border: 1px solid #eee;
+  border-radius: 2px;
+  padding: 4px 6px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +57,16 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: rgb(41, 41, 41);
+  }
+  ul li {
+    background: rgb(36, 36, 36);
+  }
+  form input{
+    border: 1px solid rgb(41, 41, 41);
+  }
+  button{
+    background: rgb(36, 36, 36);
+    color: #eee;
   }
 }
