@@ -16,9 +16,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["/components/*"],
+
+      "@/components/*": ["components/*"],
       "@hooks/*": ["/hooks/*"],
-      "@types/*": ["/types/*"]
+      "@types/*": ["/types/*"],
     }
     
   },

@@ -7,7 +7,7 @@ interface FormProps {
 
 const Form = ({ onNewSub }: FormProps) => {
   //   const [inputValues, setInputValues] =
-  //     useState<FormState["inputValues"]>(INITIAL_STATE);
+  //   useState<FormState["inputValues"]>(INITIAL_STATE);
 
   const [inputValues, dispatch] = useNewSubForm();
 

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "styles/Home.module.css";
 import { Sub } from "types/types";
 import { getAllSubs } from 'services/getAllSubs'
+import Link from 'next/link'
 
 // se sustituye por el fetch a la API.
 // const INITIAL_STATE = [
@@ -59,6 +60,9 @@ const Home: NextPage = () => {
       <List subs={subs} />
       New subs: {newSubNumber}
       <Form onNewSub={handleNewSub} />
+      <Link href="/about">
+        <a>About</a>
+      </Link>
     </div>
   );
 };
