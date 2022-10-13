@@ -39,6 +39,12 @@ const useTimer = () => {
     });
   }, []);
 
+  const handleContinue = () => {
+    setIsIdle(false);
+    setPopUp(false);
+    setIsIdle(true)
+  };
+
   return {
     timeout,
     remaining,
@@ -46,11 +52,7 @@ const useTimer = () => {
     lastActive,
     isIdle,
     popUp,
-    handleOnActive,
-    handleOnIdle,
-    setRemaining,
-    setElapsed,
-    setLastActive,
+    handleContinue
   };
 };
 export default useTimer;

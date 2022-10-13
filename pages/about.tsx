@@ -8,7 +8,8 @@ export default function About() {
     elapsed,
     lastActive,
     isIdle,
-    popUp
+    popUp,
+    handleContinue
   } = useTimer()
 
   return (
@@ -20,6 +21,7 @@ export default function About() {
       <h1>Time Elapsed: {elapsed}</h1>
       <h1>Last Active: { lastActive ? format(lastActive, 'MM-dd-yyyy HH:MM:ss.SSS') : null}</h1>
       <h1>Idle: {isIdle.toString()}</h1>
+      <button onClick={() => handleContinue()}>Continue</button>
     </div>
   );
 }
