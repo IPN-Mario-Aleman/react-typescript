@@ -14,7 +14,7 @@ const fetchAPI = async (): Promise<ResponseFromAPI> => {
 
 const mapFromApiToSubs = (apiResponse: ResponseFromAPI): Array<Sub> => {
   return apiResponse.map((subFromApi) => {
-    console.log(subFromApi)
+    //console.log(subFromApi)
     const {
       name: nick,
       image: avatar,
