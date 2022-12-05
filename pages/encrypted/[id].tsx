@@ -34,7 +34,7 @@ export default function Page({ id, token }: PageProps) {
         <title>My post with encrypted API</title>
         <meta
             property="og:image"
-            content={`https://https://react-typescript-sigma.vercel.app/api/encrypted?id=${id}&token=${token}`}
+            content={`https://react-typescript-sigma.vercel.app/api/encrypted?id=${id}&token=${token}`}
         />
       </Head> 
       <h1>Encrypted Open Graph Image.</h1>
