@@ -6,8 +6,8 @@ import styles from "styles/Home.module.css";
 import { Sub } from "types/types";
 import { getAllSubs } from "services/getAllSubs";
 import Link from "next/link";
-import useTimer from "hooks/useTimer"
-import { format } from 'date-fns'
+import useTimer from "hooks/useTimer";
+import { format } from "date-fns";
 
 // se sustituye por el fetch a la API.
 // const INITIAL_STATE = [
@@ -34,14 +34,7 @@ interface AppState {
 }
 
 const Home: NextPage = () => {
-  const {
-    timeout,
-    remaining,
-    elapsed,
-    lastActive,
-    isIdle,
-    popUp
-  } = useTimer()
+  const { timeout, remaining, elapsed, lastActive, isIdle, popUp } = useTimer();
   const [newSubNumber, setNewSubNumber] = useState<AppState["newSubNumber"]>(0);
   const divRef = useRef<HTMLDivElement>(null);
 
@@ -65,11 +58,14 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container} ref={divRef}>
-      <h1>{ popUp ? "Se ha detectado inactividad en tu cuenta" : null}</h1>
+      <h1>{popUp ? "Se ha detectado inactividad en tu cuenta" : null}</h1>
       <h1>Timeout: {timeout}ms</h1>
       <h1>Time Remaining: {remaining}</h1>
       <h1>Time Elapsed: {elapsed}</h1>
-      <h1>Last Active: { lastActive ? format(lastActive, 'MM-dd-yyyy HH:MM:ss.SSS') : null}</h1>
+      <h1>
+        Last Active:{" "}
+        {lastActive ? format(lastActive, "MM-dd-yyyy HH:MM:ss.SSS") : null}
+      </h1>
       <h1>Idle: {isIdle.toString()}</h1>
       <h1>fall subs</h1>
       <List subs={subs} />
