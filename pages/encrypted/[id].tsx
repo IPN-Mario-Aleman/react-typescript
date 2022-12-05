@@ -36,12 +36,7 @@ export default function Page({ id, token }: PageProps) {
             property="og:image"
             content={`https://react-typescript-sigma.vercel.app/api/encrypted?id=${id}&token=${token}`}
         />
-        <meta property="og:title" content="Site Title" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://react-typescript-sigma.vercel.app/api/encrypted?id=${id}&token=${token}`} />
-        <meta property="og:description" content="Site description" />
-        <meta name="theme-color" content="#FF0000" />
-        <meta name="twitter:card" content="summary_large_image"></meta>
+        
       </Head> 
       <h1>Encrypted Open Graph Image.</h1>
       <p>Only /a, /b, /c with correct tokens are accessible:</p>
