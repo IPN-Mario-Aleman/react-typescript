@@ -56,13 +56,13 @@ export default async function handler(req: NextRequest) {
           alignItems: 'center',
         }}
       >
-        <Head>
+        {/* <Head>
             <title>My post with encrypted API</title>
             <meta
                 property="og:image"
                 content={`https://my-og-img.vercel.app/api/encrypted?id=${id}&token=${token}`}
             />
-        </Head>
+        </Head> */}
         <h1>Card generated, id={id}.</h1>
       </div>
     ),
