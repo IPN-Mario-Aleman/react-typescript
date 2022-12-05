@@ -2,6 +2,7 @@
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { createHmac } from 'node:crypto';
+import Head from 'next/head'
 
 interface IParams extends ParsedUrlQuery {
   id: string;
@@ -29,6 +30,13 @@ export const getServerSideProps : GetServerSideProps = async (context) => {
 export default function Page({ id, token }: PageProps) {
   return (
     <div>
+      <Head>
+        <title>My post with encrypted API</title>
+        <meta
+            property="og:image"
+            content={`https://https://react-typescript-sigma.vercel.app/api/encrypted?id=${id}&token=${token}`}
+        />
+      </Head> 
       <h1>Encrypted Open Graph Image.</h1>
       <p>Only /a, /b, /c with correct tokens are accessible:</p>
       <a
