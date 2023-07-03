@@ -28,6 +28,8 @@ export const getServerSideProps : GetServerSideProps = async (context) => {
 };
 
 export default function Page({ id, token }: PageProps) {
+
+  console.log(id, token)
   return (
     <div>
       <Head>

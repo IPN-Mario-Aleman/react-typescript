@@ -16,6 +16,7 @@
     "@mui/material": "^5.10.9",
     "@vercel/og": "^0.0.21",
     "date-fns": "^2.29.3",
+    "device-uuid": "^1.0.4",
     "next": "^13.0.6",
     "node-fetch": "^2.6.7",
     "react": "^18.2.0",

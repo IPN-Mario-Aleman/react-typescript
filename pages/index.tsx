@@ -9,6 +9,9 @@ import Link from "next/link";
 import useTimer from "hooks/useTimer";
 import { format } from "date-fns";
 
+// let uuid = new DeviceUUID().get();
+// console.log(uuid)
+
 // se sustituye por el fetch a la API.
 // const INITIAL_STATE = [
 //   {
@@ -56,6 +59,33 @@ const Home: NextPage = () => {
     setNewSubNumber((n) => n + 1);
   }
 
+
+
+  // let du = new DeviceUUID().parse();
+  // let dua = [
+  //     du.language,
+  //     du.platform,
+  //     du.os,
+  //     du.cpuCores,
+  //     du.isAuthoritative,
+  //     du.silkAccelerated,
+  //     du.isKindleFire,
+  //     du.isDesktop,
+  //     du.isMobile,
+  //     du.isTablet,
+  //     du.isWindows,
+  //     du.isLinux,
+  //     du.isLinux64,
+  //     du.isMac,
+  //     du.isiPad,
+  //     du.isiPhone,
+  //     du.isiPod,
+  //     du.isSmartTV,
+  //     du.pixelDepth,
+  //     du.isTouchScreen
+  // ];
+  // let uuid = du.hashMD5(dua.join(':'));
+
   return (
     <div className={styles.container} ref={divRef}>
       <h1>{popUp ? "Se ha detectado inactividad en tu cuenta" : null}</h1>
@@ -72,7 +102,7 @@ const Home: NextPage = () => {
       New subs: {newSubNumber}
       <Form onNewSub={handleNewSub} />
       <Link href="/about">
-        <a>About</a>
+        About
       </Link>
     </div>
   );
